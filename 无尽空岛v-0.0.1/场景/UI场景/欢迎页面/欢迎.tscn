@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://duxdt6b4bsq3k"]
+
+[ext_resource type="Texture2D" uid="uid://ot8w6m7ikdud" path="res://资源/A4蓝天白云背景素材.png" id="1_6pxnn"]
+[ext_resource type="Script" uid="uid://bq2qoaiaip0kb" path="res://脚本/UI按钮控制/开始游戏按钮.gd" id="2_ih1vr"]
+
+[node name="欢迎" type="Control" unique_id=1952241022]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="欢迎页面背景图" type="TextureRect" parent="." unique_id=1810754000]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 720.0
+texture = ExtResource("1_6pxnn")
+expand_mode = 1
+
+[node name="游戏标题" type="Label" parent="." unique_id=368099050]
+layout_mode = 0
+offset_top = 131.0
+offset_right = 480.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(1, 0.08627451, 0.31764707, 1)
+theme_override_font_sizes/font_size = 50
+text = "无尽空岛"
+horizontal_alignment = 1
+
+[node name="游戏说明" type="RichTextLabel" parent="." unique_id=1096325740]
+layout_mode = 0
+offset_top = 228.0
+offset_right = 480.0
+offset_bottom = 519.0
+theme_override_colors/default_color = Color(1, 0.078431375, 0.22745098, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "游戏说明
+空岛区域在白天会随机刷新物资
+点击拾取物资，建造工事
+抵御夜晚的敌人，存活下来
+击杀敌人有几率掉落金币
+金币可以在商城中购买道具
+不想要的建筑可以拆除
+资源按照比例返还"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=329923191]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 538.0
+offset_right = 371.0
+offset_bottom = 629.0
+theme_override_font_sizes/font_size = 24
+text = "开始游戏"
+script = ExtResource("2_ih1vr")

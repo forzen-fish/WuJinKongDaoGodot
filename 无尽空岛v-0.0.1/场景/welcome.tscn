@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://qg3qbtr1g1y5"]
+
+[ext_resource type="PackedScene" uid="uid://duxdt6b4bsq3k" path="res://场景/UI场景/欢迎页面/欢迎.tscn" id="1_iys8c"]
+
+[node name="Welcome" type="Node2D" unique_id=298695820]
+
+[node name="欢迎" parent="." unique_id=1952241022 instance=ExtResource("1_iys8c")]

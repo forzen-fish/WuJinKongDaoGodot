@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bei3v01l8nd44"]
+
+[ext_resource type="Texture2D" uid="uid://6sbxgq5qt52r" path="res://资源/太阳图标.png" id="1_mxc2f"]
+
+[node name="生存进度ui" type="Control" unique_id=753982002]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="生存进度panel" type="Panel" parent="." unique_id=1008212164]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 91.0
+
+[node name="太阳图标" type="TextureRect" parent="生存进度panel" unique_id=1322568399]
+layout_mode = 0
+offset_right = 91.0
+offset_bottom = 91.0
+texture = ExtResource("1_mxc2f")
+expand_mode = 1
+
+[node name="白天黑夜提示标签" type="Label" parent="生存进度panel" unique_id=946283502]
+layout_mode = 0
+offset_left = 91.0
+offset_right = 315.0
+offset_bottom = 46.0
+text = "当前为白天，请努力收集资源！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="白天黑夜进度条" type="ProgressBar" parent="生存进度panel" unique_id=407191319]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 46.0
+offset_right = 315.0
+offset_bottom = 91.0
+
+[node name="生存天数记录" type="Label" parent="生存进度panel" unique_id=2018091548]
+layout_mode = 0
+offset_left = 315.0
+offset_right = 480.0
+offset_bottom = 91.0
+text = "当前已生存：0天"
+horizontal_alignment = 1
+vertical_alignment = 1
