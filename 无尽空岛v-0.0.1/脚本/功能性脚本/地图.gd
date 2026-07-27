@@ -1,10 +1,11 @@
 extends TileMapLayer
-
+@onready var extendbutton = get_node("../游戏UI前置部分/游戏主界面下方功能按钮/扩建岛屿")
 const 实体 = preload("uid://b1vfj2utri10o")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	extendbutton.extendIsland.connect(get_parent().IslandExtend)
+	#pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

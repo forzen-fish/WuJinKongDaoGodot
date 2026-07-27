@@ -1,10 +1,10 @@
 extends Node2D
 
 #初始值
-var woodnum = 20
-var stocknum = 20
-var foodnum = 20
-var goldnum = 0
+var woodnum = 2000
+var stocknum = 2000
+var foodnum = 2000
+var goldnum = 2000
 
 
 

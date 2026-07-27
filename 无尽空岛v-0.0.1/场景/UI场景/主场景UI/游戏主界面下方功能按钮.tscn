@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cu8m12gmaanch"]
 
 [ext_resource type="Script" uid="uid://c6qm25t0v4gc" path="res://脚本/UI按钮控制/回到岛屿.gd" id="1_4u5y2"]
+[ext_resource type="Script" uid="uid://c7208cuvwvjtl" path="res://脚本/功能性脚本/扩建岛屿.gd" id="1_dbu11"]
 
 [node name="游戏主界面下方功能按钮" type="Control" unique_id=1332732743]
 layout_mode = 3
@@ -25,6 +26,7 @@ offset_top = 640.0
 offset_right = 220.0
 offset_bottom = 675.0
 text = "扩建岛屿"
+script = ExtResource("1_dbu11")
 
 [node name="道具商店" type="Button" parent="." unique_id=1351473162]
 layout_mode = 0
