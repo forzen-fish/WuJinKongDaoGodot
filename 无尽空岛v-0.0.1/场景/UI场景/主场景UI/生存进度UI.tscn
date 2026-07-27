@@ -15,7 +15,7 @@ layout_mode = 0
 offset_right = 480.0
 offset_bottom = 91.0
 
-[node name="太阳图标" type="TextureRect" parent="生存进度panel" unique_id=1322568399]
+[node name="太阳月亮图标" type="TextureRect" parent="生存进度panel" unique_id=1322568399]
 layout_mode = 0
 offset_right = 91.0
 offset_bottom = 91.0

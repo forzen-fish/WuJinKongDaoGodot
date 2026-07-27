@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bi2o0fqhi3xi6"]
+
+[ext_resource type="Script" uid="uid://c3r5j1wkgep8c" path="res://脚本/功能性脚本/资源仓库.gd" id="1_kplc6"]
+
+[node name="资源仓库" type="Node2D" unique_id=924767337]
+script = ExtResource("1_kplc6")

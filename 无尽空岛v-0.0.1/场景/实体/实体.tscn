@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b1vfj2utri10o"]
+
+[ext_resource type="Script" uid="uid://c8u5knfs0l6y4" path="res://脚本/功能性脚本/实体.gd" id="1_gdrm6"]
+
+[node name="实体" type="Node2D" unique_id=1163635144]
+script = ExtResource("1_gdrm6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1017457996]
+
+[node name="Timer" type="Timer" parent="." unique_id=1267851101]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

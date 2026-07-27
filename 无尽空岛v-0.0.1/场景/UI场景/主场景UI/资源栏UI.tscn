@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://blkk3pgvrxw0l"]
+
+[ext_resource type="Texture2D" uid="uid://cpmijbde5ssu1" path="res://资源/木材图标.png" id="1_usi6m"]
+[ext_resource type="Texture2D" uid="uid://d0etedsfhgj5n" path="res://资源/石头图标.png" id="2_12le5"]
+[ext_resource type="Texture2D" uid="uid://cd7s3vwrpjfr8" path="res://资源/食物.png" id="3_g77s6"]
+[ext_resource type="Texture2D" uid="uid://ciyec236v37vm" path="res://资源/金币图标.png" id="4_gy6jv"]
+
+[node name="资源栏ui" type="Control" unique_id=1351134733]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="资源栏" type="Panel" parent="." unique_id=737558685]
+layout_mode = 0
+offset_top = 91.0
+offset_right = 480.0
+offset_bottom = 136.5
+
+[node name="木材栏" type="Panel" parent="资源栏" unique_id=801782373]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 45.5
+offset_transform_enabled = true
+
+[node name="木材图标" type="TextureRect" parent="资源栏/木材栏" unique_id=413379096]
+layout_mode = 0
+offset_right = 45.5
+offset_bottom = 45.5
+texture = ExtResource("1_usi6m")
+expand_mode = 1
+
+[node name="木材标签" type="Label" parent="资源栏/木材栏" unique_id=189842799]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 82.0
+offset_bottom = 45.5
+theme_override_font_sizes/font_size = 12
+text = "木材："
+vertical_alignment = 1
+
+[node name="木材数量" type="Label" parent="资源栏/木材栏" unique_id=1450100116]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+vertical_alignment = 1
+
+[node name="石材栏" type="Panel" parent="资源栏" unique_id=517346103]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 240.0
+offset_bottom = 45.5
+offset_transform_enabled = true
+
+[node name="图标" type="TextureRect" parent="资源栏/石材栏" unique_id=682401066]
+layout_mode = 0
+offset_right = 45.5
+offset_bottom = 45.5
+texture = ExtResource("2_12le5")
+expand_mode = 1
+
+[node name="标签" type="Label" parent="资源栏/石材栏" unique_id=1270710498]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 82.0
+offset_bottom = 45.5
+theme_override_font_sizes/font_size = 12
+text = "石材："
+vertical_alignment = 1
+
+[node name="石材数量" type="Label" parent="资源栏/石材栏" unique_id=1246509969]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+vertical_alignment = 1
+
+[node name="食物栏" type="Panel" parent="资源栏" unique_id=810076338]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 360.0
+offset_bottom = 45.5
+offset_transform_enabled = true
+
+[node name="图标" type="TextureRect" parent="资源栏/食物栏" unique_id=988639906]
+layout_mode = 0
+offset_right = 45.5
+offset_bottom = 45.5
+texture = ExtResource("3_g77s6")
+expand_mode = 1
+
+[node name="标签" type="Label" parent="资源栏/食物栏" unique_id=1149034247]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 82.0
+offset_bottom = 45.5
+theme_override_font_sizes/font_size = 12
+text = "食物："
+vertical_alignment = 1
+
+[node name="食物数量" type="Label" parent="资源栏/食物栏" unique_id=91583884]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+vertical_alignment = 1
+
+[node name="金币栏" type="Panel" parent="资源栏" unique_id=302017264]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 480.0
+offset_bottom = 45.5
+offset_transform_enabled = true
+
+[node name="图标" type="TextureRect" parent="资源栏/金币栏" unique_id=342322780]
+layout_mode = 0
+offset_right = 45.5
+offset_bottom = 45.5
+texture = ExtResource("4_gy6jv")
+expand_mode = 1
+
+[node name="标签" type="Label" parent="资源栏/金币栏" unique_id=787898798]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 82.0
+offset_bottom = 45.5
+theme_override_font_sizes/font_size = 12
+text = "金币："
+vertical_alignment = 1
+
+[node name="金币数量" type="Label" parent="资源栏/金币栏" unique_id=1535608030]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+vertical_alignment = 1

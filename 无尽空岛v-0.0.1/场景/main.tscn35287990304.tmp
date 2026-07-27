@@ -35,8 +35,6 @@ script = ExtResource("4_tvtfe")
 
 [node name="资源刷新timer" type="Timer" parent="TileMapLayer" unique_id=194936035]
 
-[node name="BuildingMapLayer" type="TileMapLayer" parent="." unique_id=1520918038]
-
 [node name="游戏UI部分" type="CanvasLayer" parent="." unique_id=10258869]
 layer = -1
 
@@ -61,6 +59,7 @@ mouse_filter = 2
 [node name="昼夜进度条Timer" type="Timer" parent="." unique_id=748628895]
 
 [node name="资源仓库" parent="." unique_id=924767337 instance=ExtResource("9_i318j")]
+visible = false
 
 [connection signal="timeout" from="TileMapLayer/资源刷新timer" to="." method="_on_creatRestimer_timeout"]
 [connection signal="timeout" from="昼夜进度条Timer" to="." method="_on_daynighttimer_timeout"]
