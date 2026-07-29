@@ -4,7 +4,6 @@ extends TileMapLayer
 const 实体 = preload("uid://b1vfj2utri10o")
 
 
-
 # BuildMode
 #可用建造坐标
 var avlBuildPosList
@@ -12,6 +11,7 @@ var avlBuildPosList
 @onready var Buliemode1: Button = $"../建造模式UI/建筑列表ui/ScrollContainer/HBoxContainer/房屋建筑按钮"
 #房子场景
 const buildHouse = preload("uid://ui115dhtn5wg")
+
 
 #0不是建造模式，1是房子，2是...
 var buildMode = 0
@@ -72,11 +72,11 @@ func getavlPos(xf,yf):
 #在点击位置添加一个房屋
 func build1():
 	buildMode = 1
-	print("收到信号")
+	#print("收到信号")
 #非建造模式
 func debuild1():
 	buildMode = 0
-	print("收到信号")
+	#print("收到信号")
 
 
 # 所有建造写到下面的If函数里面

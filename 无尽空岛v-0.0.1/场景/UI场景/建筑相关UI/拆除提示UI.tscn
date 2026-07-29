@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://qvtmglg15by7"]
 
+[ext_resource type="Script" uid="uid://d20qwdy551el0" path="res://脚本/建筑脚本/房屋拆除按钮.gd" id="1_jr04l"]
+
 [node name="拆除提示ui" type="Control" unique_id=895972852]
 layout_mode = 3
 anchors_preset = 15
@@ -14,10 +16,4 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "拆除
 "
-
-[node name="取消按钮" type="Button" parent="." unique_id=741437453]
-layout_mode = 0
-offset_top = 80.0
-offset_right = 40.0
-offset_bottom = 111.0
-text = "取消"
+script = ExtResource("1_jr04l")

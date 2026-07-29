@@ -10,6 +10,13 @@ extends Node2D
 
 @onready var hpbar: ProgressBar = $HP
 
+#拆除
+@onready var dismantleButtom: Button = $"拆除提示ui/拆除按钮"
+
+@onready var ResWarehouse: Node2D = $资源仓库
+
+#地图
+var tile_map_layer
 
 #房屋血量
 var hp = 100
@@ -22,13 +29,18 @@ var tag = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	tile_map_layer = get_node("/root/Main/TileMapLayer")
 	dismantle_ui.visible = false
 	hpbar.max_value = hp
 	hpbar.value = hpbar.max_value
+	dismantleButtom.dismantleSignal.connect(dismantleBuilding)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# hp为0 销毁
+	if hp <=0:
+		destroyBuilding()
 	pass
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -54,3 +66,20 @@ func change_tag():
 		tag = 1
 	else:
 		tag = 0
+
+#用户点击了拆除按钮，根据Hp拆除建筑，然后把坐标还给map
+func dismantleBuilding():
+	#找到当前实例对象所在的格子
+	var localmousePos = global_position#需要改成现在的对象
+	var mapPos = tile_map_layer.local_to_map(localmousePos)
+	#将这个坐标加入到列表
+	tile_map_layer.avlBuildPosList.append(mapPos)
+	#TODO 根据hp退还资源
+	
+	#销毁
+	destroyBuilding()
+	print("房屋场景收到拆除信号")
+
+
+func destroyBuilding():
+	queue_free()
