@@ -176,7 +176,7 @@ func IslandExtend():
 			#print(i)
 			tile_map_layer.set_cell(i,0,Vector2i(0, 0))
 			#print(tile_map_layer.get_cell_source_id(i))
-		
+		tile_map_layer.avlBuildPosList = tile_map_layer.get_used_cells()
 	else:
 		#弹出个提示 msgResUnenough
 		var template = "资源不足此次扩建需要%d木头，%d石头，%d食物，%d金币。"
@@ -211,3 +211,28 @@ func calcExtendRes(IslandNum):
 	IslandNum*extendFood,
 	IslandNum*extendGold,
 	]
+
+#检查并且扣除资源 能建造、口资源，不能的话返回false
+func checkBuildRes(Build):
+	#var res = [["木材",10],["石材",10],["食物",10]]
+	var woodNeed = Build.res[0][1]
+	var stockNeed = Build.res[1][1]
+	var foodNeed = Build.res[2][1]
+	var goldNeed = 0
+	if len(Build.res)==4:
+		goldNeed = Build.res[3][1]
+	#var woodnum = 2000
+	#var stocknum = 2000
+	#var foodnum = 2000
+	#var goldnum = 2000
+	if woodNeed<=ResWarehouse.woodnum and stockNeed<=ResWarehouse.stocknum and foodNeed<=ResWarehouse.foodnum and goldNeed<=ResWarehouse.goldnum :
+		#扣除资源
+		ResWarehouse.woodnum -= woodNeed
+		ResWarehouse.stocknum -= stockNeed
+		ResWarehouse.foodnum -= foodNeed
+		ResWarehouse.goldnum -= goldNeed
+		ResWarehouse.updateRes()
+		#返回
+		return true
+	else:
+		return false

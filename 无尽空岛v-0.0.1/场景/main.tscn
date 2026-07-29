@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dqu81wc5xjdll" path="res://脚本/功能性脚本/摄像机移动脚本.gd" id="5_vxhiv"]
 [ext_resource type="Texture2D" uid="uid://b18c631u7w0xd" path="res://资源/小岛.png" id="6_bkfd5"]
 [ext_resource type="PackedScene" uid="uid://bi2o0fqhi3xi6" path="res://场景/资源仓库/资源仓库.tscn" id="9_i318j"]
+[ext_resource type="PackedScene" uid="uid://c4156tbgs0qym" path="res://场景/UI场景/功能按钮下UI/建筑列表UI.tscn" id="10_08atr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bkfd5"]
 texture = ExtResource("6_bkfd5")
@@ -35,8 +36,6 @@ tile_set = SubResource("TileSet_fytqj")
 script = ExtResource("4_tvtfe")
 
 [node name="资源刷新timer" type="Timer" parent="TileMapLayer" unique_id=194936035]
-
-[node name="BuildingMapLayer" type="TileMapLayer" parent="." unique_id=1520918038]
 
 [node name="游戏UI部分" type="CanvasLayer" parent="." unique_id=10258869]
 layer = -1
@@ -69,6 +68,13 @@ ok_button_text = "我知道了"
 [node name="昼夜进度条Timer" type="Timer" parent="." unique_id=748628895]
 
 [node name="资源仓库" parent="." unique_id=924767337 instance=ExtResource("9_i318j")]
+
+[node name="建造模式UI" type="CanvasLayer" parent="." unique_id=1566655835]
+
+[node name="建筑列表ui" parent="建造模式UI" unique_id=790863778 instance=ExtResource("10_08atr")]
+visible = false
+offset_top = 495.0
+offset_bottom = -105.0
 
 [connection signal="timeout" from="TileMapLayer/资源刷新timer" to="." method="_on_creatRestimer_timeout"]
 [connection signal="timeout" from="昼夜进度条Timer" to="." method="_on_daynighttimer_timeout"]

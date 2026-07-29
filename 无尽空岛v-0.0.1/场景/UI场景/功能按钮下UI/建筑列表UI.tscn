@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c4156tbgs0qym"]
+
+[ext_resource type="Texture2D" uid="uid://dsyvwiwy31vnl" path="res://资源/房子.png" id="1_3cbw0"]
+[ext_resource type="Script" uid="uid://d0hldw43ikgr" path="res://脚本/建筑脚本/房屋建筑按钮.gd" id="2_77nrl"]
+
+[node name="建筑列表ui" type="Control" unique_id=790863778]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=285709771]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 120.0
+vertical_scroll_mode = 0
+scroll_horizontal_by_default = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer" unique_id=2142627221]
+layout_mode = 2
+
+[node name="房屋建筑按钮" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=1614541498]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.70859, 0.55701274, 0.19545233, 1)
+toggle_mode = true
+text = "房屋：
+10木材
+10石材
+10食物"
+icon = ExtResource("1_3cbw0")
+script = ExtResource("2_77nrl")
+
+[node name="Button2" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=2020089828]
+layout_mode = 2
+text = "房屋：
+10木材
+10石材
+10食物"
+icon = ExtResource("1_3cbw0")
+
+[node name="Button3" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=189180581]
+layout_mode = 2
+text = "房屋：
+10木材
+10石材
+10食物"
+icon = ExtResource("1_3cbw0")
+
+[node name="Button4" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=1897036487]
+layout_mode = 2
+text = "房屋：
+10木材
+10石材
+10食物"
+icon = ExtResource("1_3cbw0")
+
+[node name="Button5" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=2019013496]
+layout_mode = 2
+text = "房屋：
+10木材
+10石材
+10食物"
+icon = ExtResource("1_3cbw0")

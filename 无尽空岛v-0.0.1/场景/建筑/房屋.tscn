@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ui115dhtn5wg"]
+
+[ext_resource type="Script" uid="uid://c403tv6mia6oh" path="res://脚本/建筑脚本/房屋.gd" id="1_go41s"]
+[ext_resource type="Texture2D" uid="uid://dsyvwiwy31vnl" path="res://资源/房子.png" id="2_l27rt"]
+[ext_resource type="PackedScene" uid="uid://qvtmglg15by7" path="res://场景/UI场景/建筑相关UI/拆除提示UI.tscn" id="3_l27rt"]
+
+[node name="房屋" type="Node2D" unique_id=119181227]
+script = ExtResource("1_go41s")
+
+[node name="Sprite2D房屋" type="Sprite2D" parent="." unique_id=1360834322]
+texture = ExtResource("2_l27rt")
+
+[node name="拆除提示ui" parent="." unique_id=895972852 instance=ExtResource("3_l27rt")]
+anchors_preset = 9
+anchor_right = 0.0
+offset_left = -22.0
+offset_top = -58.0
+offset_right = -22.0
+offset_bottom = -58.0
+grow_horizontal = 1
+
+[node name="HP" type="ProgressBar" parent="." unique_id=352221252]
+offset_left = -1.0
+offset_top = -14.0
+offset_right = 3.0
+offset_bottom = 13.0

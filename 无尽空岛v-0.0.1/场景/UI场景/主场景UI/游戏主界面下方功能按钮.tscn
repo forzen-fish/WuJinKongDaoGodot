@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6qm25t0v4gc" path="res://脚本/UI按钮控制/回到岛屿.gd" id="1_4u5y2"]
 [ext_resource type="Script" uid="uid://c7208cuvwvjtl" path="res://脚本/功能性脚本/扩建岛屿.gd" id="1_dbu11"]
+[ext_resource type="Script" uid="uid://dwtsaomgyc8s7" path="res://脚本/功能性脚本/建造模式.gd" id="1_dfok1"]
 
 [node name="游戏主界面下方功能按钮" type="Control" unique_id=1332732743]
 layout_mode = 3
@@ -18,6 +19,7 @@ offset_top = 640.0
 offset_right = 100.0
 offset_bottom = 675.0
 text = "建造模式"
+script = ExtResource("1_dfok1")
 
 [node name="扩建岛屿" type="Button" parent="." unique_id=641930539]
 layout_mode = 0
